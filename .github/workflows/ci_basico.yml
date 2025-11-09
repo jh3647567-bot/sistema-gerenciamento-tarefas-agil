@@ -1,1 +1,32 @@
- 
+name: CI Básico (Controle de Qualidade)
+
+# Define quando este workflow será executado: 
+# Em cada envio (push) para a branch 'main' e em cada Pull Request
+on:
+  push:
+    branches: [ main ] 
+  pull_request:
+    branches: [ main ] 
+
+jobs:
+  build:
+    # Roda na última versão do Ubuntu
+    runs-on: ubuntu-latest 
+
+    steps:
+    # 1. Faz o checkout do seu código (baixa o código)
+    - uses: actions/checkout@v4 
+
+    # 2. Configura o ambiente Python (para rodar o app.py)
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' 
+
+    # 3. Simula a execução de testes
+    - name: Rodar Teste Básico de Sanidade
+      run: |
+        echo "--- Iniciando o Pipeline de CI ---"
+        # Executa o script Python para verificar se ele roda sem erros de sintaxe
+        python app.py
+        echo "A simulação de execução e testes automáticos foi concluída com sucesso!" 
