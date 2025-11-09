@@ -11,7 +11,7 @@ Este sistema é baseado em Python e deve ser executado localmente.
 
 1.  Certifique-se de ter o Python 3.x instalado.
 2.  Navegue até a pasta raiz do projeto no terminal.
-3.  Execute o script principal: `python app.py`
+3.  Execute o script principal: `python src/app.py`
 
 ## 📝 Requisitos Atualizados (Gestão de Mudanças)
 
