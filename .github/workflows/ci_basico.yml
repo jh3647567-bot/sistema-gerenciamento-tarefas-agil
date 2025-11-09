@@ -28,5 +28,5 @@ jobs:
       run: |
         echo "--- Iniciando o Pipeline de CI ---"
         # Executa o script Python para verificar se ele roda sem erros de sintaxe
-        python app.py
+        python src/app.py
         echo "A simulação de execução e testes automáticos foi concluída com sucesso!" 
