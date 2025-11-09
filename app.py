@@ -1,3 +1,4 @@
+"""Módulo principal para o gerenciamento de tarefas CRUD, incluindo priorização por Criticidade."""
 import json
 import os
 
